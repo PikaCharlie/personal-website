@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>COMM2036</title>
+        <meta name="Personal Website" content="This is a personal website of He Chenglong">
+        <meta name="author" content="He Chenglong">
+        <meta name="referrer" content="always">
+        <title>He Chenglong (AI, programmer, industrial robot design, modeling, graphic design, Primary Product Manager)</title>
+        <!--简介-->
+        <link rel="stylesheet" href="style/style.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="#section1">Education Background</a>
+            <a href="#section2">Awards and Activities</a>
+            <a href="#section3">Video of Robotics in FIRST</a>
+            <a href="#section4">Skills</a>
+          </div>
+          <button onclick="topFunction()" id="myBtn" class="top-button">back to the top</button>
+          <script>
+            window.onscroll = function() {scrollFunction()};
+            
+            function scrollFunction() {
+              if (document.body.scrollTop > 35 || document.documentElement.scrollTop > 35) {
+                document.getElementById("myBtn").style.display = "block";
+              } else {
+                document.getElementById("myBtn").style.display = "none";
+              }
+            }
+            function topFunction() {
+              document.body.scrollTop = 0;
+              document.documentElement.scrollTop = 0;
+            }
+            </script>
+
+        
+        <h1 align="center">He Chenglong’s personal introduction</h1>
+        <img src="images/BIG_HEAD.jpg" class="center" width="50%" height="50%">
+<p class="hcl_info">
+    Hello everyone, my name is Charlie He, and I am currently studying computer science at Hong Kong Baptist University. I have won many awards and participated in many activities, including product design and web design work at AMKHY and HKBUCSSA, as well as publicity planning and event preparation work for the Mainland and Hong Kong Youth Associations. I have also participated in FIRST World Robot Association competitions and won multiple awards, including the runner-up in the 2017 FIRST China International Invitational Competition and the first prize in the 2018 FIRST China Robot Conference. In addition, I also serve as the junior product manager of HKSTP x HK InnoX, participating in market research and business analysis of optical chip projects, and also participating in chip design work. I have many skills, including WORD design, graphic design, video design and programming, etc.
+            </p>
+            
+            <p class="hcl_info2">
+                I also have good teamwork, problem-solving and communication skills. I am always enthusiastic and creative and enjoy taking on new challenges and learning new skills.
+             </p>
+            </p>
+    <h2 id="section1">1. Education Background</h2>
+            <h4 p align="left">Hong Kong Baptist University</p>
+            <li span style="float:left;">Bachelor of Computer Science</span></li>
+            <span style="float:right;">Sep. 2022-Now</span>
+            <br style="clear:both;" />
+
+            
+
+    <h2 id="section2"> 2. Awards and Activities </h2>
+            <h4><span style="float:left;">Chinese Students and Scholars Association</span>
+                <span style="float:right;">Sep. 2022-Now</span></h4>
+            <br style="clear:both;" />
+            <ul>
+            <li>Product Design</li>
+            <li>Web Design</li>
+            </ul>
+
+            <img src="images/c1.jpg" alt="Image 1" class="center" width="817" height="600">
+
+            <h4>
+                <span style="float:left;">FIRST World Robotics Association</span>
+            </h4>
+            <div style="clear:both;">
+            <ul>
+            <li><span style="float:left;">Runner-up League in 2017 FIRST China International Invitation</span><span style="float:right;">Jun. 2017</span></li>
+            <li><span style="float:left;">Innovation Award (2018 FIRST Tech Challenge held in Xi’an)</span><span style="float:right;">Apr. 2018</span></li>
+            <li><span style="float:left;">First Prize of 2018 FIRST China Robotics Conference</span><span style="float:right;">Jun. 2018</span></li>
+            <li><span style="float:left;">Champions League (2018 FIRST Tech Challenge held in Chongqing)</span><span style="float:right;">Mar. 2018</span></li>
+            <li><span style="float:left;">PTC Design Award in FIRST</span><span style="float:right;">Jun. 2019</span></li>
+            <li><span style="float:left;">Rockwell Control Award in Houston</span><span style="float:right;">Jun. 2020</span></li>
+            <ul style="list-style-type: none;">
+                <li>--Mechanical Construction; Mechanical Programming</li>
+            </ul>
+            </ul>
+
+            <div class="image-containers">
+                <img src="images/机器人1.png" alt="Image 1" id="imageContainer2" class="centered-image">
+            </div>
+            
+            <script>
+                var images = ["images/机器人1.png", "images/机器人2.jpg", "images/机器人3.jpg", "images/机器人4.jpg", "images/机器人5.jpg", "images/机器人6.jpg", "images/机器人7.jpg"];
+                var index = 0;
+                var imageContainer = document.getElementById('imageContainer2');
+                var intervalId;
+            
+                imageContainer.addEventListener('mouseover', function() {
+                    if (!intervalId) {
+                        intervalId = setInterval(function() {
+                            var img = imageContainer;
+                            img.style.transform = 'rotateY(180deg)';
+                            setTimeout(function() {
+                                index++;
+                                if (index == images.length) {
+                                    index = 0;
+                                }
+                                img.src = images[index];
+                                img.alt = "Image " + (index + 1);
+                                img.style.transform = 'rotateY(0deg)';
+                            }, 1000);
+                        }, 2000);
+                    }
+                });
+            </script>
+            
+            
+
+
+            <h4>
+                <span style="float:left;">HKSTP x HK InnoX</span>
+            </h4>
+            <div style="clear:both;">
+            <ul>
+            <li><span style="float:left;">Primary Product Manager </span><span style="float:right;">Jan. 2024-Now</span></li>
+            <ul style="list-style-type: none;">
+                <li>--Market Research; Business Analysis</li>
+            </ul>
+            </ul>
+            <img src="images/STP.jpg" class="center" width="817" height="600">
+            
+
+        
+
+    <h2 id="section3"> 3. Video of Robotics in FIRST <h2>
+        <h3>3.1 Obama's encouragement for the FIRST championship team </h3>
+        <iframe class="center" width="817" height="460" src="https://www.youtube.com/embed/Jz_t68hrNAw" title="2014 FIRST Championship Message from President Obama" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <h3>3.2 FIRST Champion Flag Raising Ceremony in America</h3>
+        <iframe class="center" width="817" height="460" src="https://www.youtube.com/embed/UeeWHMQfdVA" title="FIRST Champion Flag Raising Ceremony" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        
+    <h3 id="section4"> 4. Skills <h2>
+            <table border="1">
+                <tr>
+                  <th>Skills List</th>
+                  <th>Software</th>
+                  <th>Level</th>
+                </tr>
+                <tr>
+                  <td>Text design</td>
+                  <td>Word; Excel; PowerPoints; Tableau </td>
+                  <td>Advanced</td>
+                </tr>
+                <tr>
+                  <td>Graphic design</td>
+                  <td>CorelDRAW; Adobe Photoshop; Solid Work</td>
+                  <td>Junior</td>
+                </tr>
+                <tr>
+                    <td>Video design</td>
+                    <td>AE, Blender</td>
+                    <td>Junior</td>
+                  </tr>
+                <tr>
+                    <td>Program design</td>
+                    <td>Cisco Packet Tracer (Network Layer); Processing (Python); Visual Studio Code (C); IntelliJ (Java), MySQL (Database), Android Studio(C++)</td>
+                    <td>Intermediate</td>
+                  </tr>
+            </table>
+
+
+             
+    <h2> 5. Personal contact details </h2>
+    <img src="images/c4.jpg" class="center" width="50%" height="50%">
+    <footer>
+        <p class="center"><a href="https://faq.whatsapp.com/1183494482518500/?helpref=hc_fnav&cms_platform=android&locale=zh_CN" target="_blank">WhatsApp:+852-67414212</a></p>
+        <p class="center"><a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F%3Fhl%3Dzh-CN&emr=1&hl=zh-CN&ifkv=ATuJsjypHF5alakWE01yyPSnZ3HVsA3bqBZV5v9PD2H4f_4MqV7zIfnWuUO1e2PJ6I2c3z7Z_Wda8A&ltmpl=default&ltmplcache=2&osid=1&passive=true&rm=false&scc=1&service=mail&ss=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-468756898%3A1710513611733552&theme=mn&ddm=0">hechenglong810@gmail.com</a> </p>
+        <p class="right">&#169 He Chenglong</p>
+</footer>
+</body>
+
+</html>
+
+
