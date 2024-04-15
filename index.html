@@ -1,178 +1,720 @@
 <!DOCTYPE html>
 <html>
-    <head>
+<head>
+<title>Communication Visualization in the era of AI</title>
+<meta name="author" content="Richard, Charlie, Alain"
+<meta name="description" content="Providing vivid examples to illustrate current advance in AI content Generation">
 
-        <title>COMM2036</title>
-        <meta name="Personal Website" content="This is a personal website of He Chenglong">
-        <meta name="author" content="He Chenglong">
-        <meta name="referrer" content="always">
-        <title>He Chenglong (AI, programmer, industrial robot design, modeling, graphic design, Primary Product Manager)</title>
-        <!--简介-->
-        <link rel="stylesheet" href="style/style.css">
-    </head>
-    <body>
-        <div class="navbar">
-            <a href="#section1">Education Background</a>
-            <a href="#section2">Awards and Activities</a>
-            <a href="#section3">Video of Robotics in FIRST</a>
-            <a href="#section4">Skills</a>
-          </div>
-          <button onclick="topFunction()" id="myBtn" class="top-button">back to the top</button>
-          <script>
-            window.onscroll = function() {scrollFunction()};
-            
-            function scrollFunction() {
-              if (document.body.scrollTop > 35 || document.documentElement.scrollTop > 35) {
-                document.getElementById("myBtn").style.display = "block";
-              } else {
-                document.getElementById("myBtn").style.display = "none";
-              }
-            }
-            function topFunction() {
-              document.body.scrollTop = 0;
-              document.documentElement.scrollTop = 0;
-            }
-            </script>
 
-        
-        <h1 align="center">He Chenglong’s personal introduction</h1>
-        <img src="images/BIG_HEAD.jpg" class="center" width="50%" height="50%">
-<p class="hcl_info">
-    Hello everyone, my name is Charlie He, and I am currently studying computer science at Hong Kong Baptist University. I have won many awards and participated in many activities, including product design and web design work at AMKHY and HKBUCSSA, as well as publicity planning and event preparation work for the Mainland and Hong Kong Youth Associations. I have also participated in FIRST World Robot Association competitions and won multiple awards, including the runner-up in the 2017 FIRST China International Invitational Competition and the first prize in the 2018 FIRST China Robot Conference. In addition, I also serve as the junior product manager of HKSTP x HK InnoX, participating in market research and business analysis of optical chip projects, and also participating in chip design work. I have many skills, including WORD design, graphic design, video design and programming, etc.
-            </p>
-            
-            <p class="hcl_info2">
-                I also have good teamwork, problem-solving and communication skills. I am always enthusiastic and creative and enjoy taking on new challenges and learning new skills.
-             </p>
-            </p>
-    <h2 id="section1">1. Education Background</h2>
-            <h4 p align="left">Hong Kong Baptist University</p>
-            <li span style="float:left;">Bachelor of Computer Science</span></li>
-            <span style="float:right;">Sep. 2022-Now</span>
-            <br style="clear:both;" />
+<style>
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #b9ebf0;
+  }
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
 
-            
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .service {
+    background-color: #80c2eb;
+    border: 1px solid #eed4d4;
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+  .service h2 {
+    color: #222;
+  }
+  .service p {
+    color: #555;
+  }
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+    .top-button {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      border: none;
+      outline: none;
+      background-color: red;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 10px;
+    }
 
-    <h2 id="section2"> 2. Awards and Activities </h2>
-            <h4><span style="float:left;">Chinese Students and Scholars Association</span>
-                <span style="float:right;">Sep. 2022-Now</span></h4>
-            <br style="clear:both;" />
-            <ul>
-            <li>Product Design</li>
-            <li>Web Design</li>
-            </ul>
+    .top-button:hover {
+      background-color: #555;
+    }
+    .navbar {
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+  background-color: #666;
+}
 
-            <img src="images/c1.jpg" alt="Image 1" class="center" width="817" height="600">
 
-            <h4>
-                <span style="float:left;">FIRST World Robotics Association</span>
-            </h4>
-            <div style="clear:both;">
-            <ul>
-            <li><span style="float:left;">Runner-up League in 2017 FIRST China International Invitation</span><span style="float:right;">Jun. 2017</span></li>
-            <li><span style="float:left;">Innovation Award (2018 FIRST Tech Challenge held in Xi’an)</span><span style="float:right;">Apr. 2018</span></li>
-            <li><span style="float:left;">First Prize of 2018 FIRST China Robotics Conference</span><span style="float:right;">Jun. 2018</span></li>
-            <li><span style="float:left;">Champions League (2018 FIRST Tech Challenge held in Chongqing)</span><span style="float:right;">Mar. 2018</span></li>
-            <li><span style="float:left;">PTC Design Award in FIRST</span><span style="float:right;">Jun. 2019</span></li>
-            <li><span style="float:left;">Rockwell Control Award in Houston</span><span style="float:right;">Jun. 2020</span></li>
-            <ul style="list-style-type: none;">
-                <li>--Mechanical Construction; Mechanical Programming</li>
-            </ul>
-            </ul>
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
 
-            <div class="image-containers">
-                <img src="images/机器人1.png" alt="Image 1" id="imageContainer2" class="centered-image">
+.dropdown {
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.snowflake {
+  position: fixed;
+  top: 0;
+  opacity:0;
+  color: #e78c8c;
+  font-size: 1em;
+  z-index: 9999;
+  animation: fall 3s linear infinite, wave 2s ease-in-out infinite;
+}
+
+
+@keyframes fall {
+  0% { top: -10%; opacity:0.2;}
+  100% { top: 100%; opacity:1.2;}
+}
+
+@keyframes wave {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(50px); }
+}
+@keyframes flip {
+  0% { transform: rotateY(0deg); }
+  50% { transform: rotateY(-180deg); }
+  100% { transform: rotateY(-360deg); }
+}
+.slider {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  perspective: 1000px;
+  margin: auto;
+  
+}
+.slider img {
+  width: 200px;
+  height: auto;
+  position: absolute;
+  animation: flip 5s infinite;
+  backface-visibility: hidden;
+}
+.slider img:nth-child(2) {
+  animation-delay: 2.5s;
+}
+  </style>
+</head>
+
+<script>
+  window.onload = function() {
+    var snowflakes = document.querySelectorAll('.snowflake');
+    snowflakes.forEach(function(snowflake) {
+      snowflake.style.left = Math.random() * 100 + 'vw';
+      snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+      snowflake.style.animationDelay = Math.random() * 3 + 's';
+    });
+  };
+
+  </script>
+  
+  
+
+<body>
+    
+  <div class="navbar"style="position: fixed; top: 0; width: 100%; z-index: 1000;">
+    <div class="dropdown">
+      <button class="dropbtn"><a href="#section1">GAI</a>
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content"style="position: fixed;">
+        <a href="#sub1">Introducing GAI</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn"><a href="#section2">text-to-image</a>
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content"style="position: fixed;">
+        <a href="#sub3">Introducing Technology</a>
+        <a href="#sub4">Introducing Software</a>
+      </div>
+    </div>
+
+    
+    <div class="dropdown">
+      <button class="dropbtn"><a href="#section3">text-to-video</a>
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content"style="position: fixed;">
+        <a href="#sub5">Introducing Technology</a>
+        <a href="#sub6">Introducing Software</a>
+      </div>
+    </div>
+    
+    <div class="dropdown">
+      <button class="dropbtn"><a href="#section4">text-to-speech</a>
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content"style="position: fixed;">
+        <a href="#sub7">Introducing Technology</a>
+        <a href="#sub8">Introducing Software</a>
+      </div>
+    </div>
+  </div>
+
+
+<button onclick="topFunction()" id="myBtn" class="top-button">back to the top</button>
+
+
+<div class="snowflake">❄</div>
+<div class="snowflake">❀</div>
+<div class="snowflake">❁</div>
+<div class="snowflake">❀</div>
+<div class="snowflake">❄</div>
+<div class="snowflake">❁</div>
+<div class="snowflake">❀</div>
+<div class="snowflake">❄</div>
+<div class="snowflake">❄</div>
+<div class="snowflake">❀</div>
+<div class="snowflake">❄</div>
+<div class="snowflake">❁</div>
+<div class="snowflake">❄</div>
+<div class="snowflake">❄</div>
+<div class="snowflake">❄</div>
+<div class="snowflake">❀</div>
+<div class="snowflake">❁</div>
+<div class="snowflake">❀</div>
+<div class="snowflake">❄</div>
+<div class="snowflake">❁</div>
+<div class="snowflake">❀</div>
+<div class="snowflake">❄</div>
+<div class="snowflake">❄</div>
+<div class="snowflake">❀</div>
+<div class="snowflake">❄</div>
+<div class="snowflake">❁</div>
+<div class="snowflake">❄</div>
+<div class="snowflake">❄</div>
+
+<script>
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 35 || document.documentElement.scrollTop > 35) {
+      document.getElementById("myBtn").style.display = "block";
+    } else {
+      document.getElementById("myBtn").style.display = "none";
+    }
+  }
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
+</script>
+
+    <header>
+      <p>1</p>
+      <p>❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄❄</p>
+      
+        <h1 class="inline" align="center">Introduction to generative artificial intelligence software</h1>
+      </header>    
+
+      <div class="container">
+        <p></p>
+        <div style="display: flex; flex-direction: row; justify-content: space-between;">
+            <div style="flex: 1; margin-right: 10px; padding: 5px; border: 3px solid #5b5858; border-radius: 15px; background: url('background1.jpg'); box-shadow: 10px 10px 5px grey;">
+                <h2 id="sub1">❀ What is GAI?</h2>
+                <p>This AI model generates new data with similar characteristics by learning the patterns and structures of the input training data. Improvements in Transformer-based deep neural networks, especially large language models (LLMs), fueled the development of generative AI systems in the early 2020s.</p>
+                <p>The second is “Variational Autoencoders”, it encodes input data into smaller information called “latent space”, then creates random points with the information of the latent space and inputted data to create images. The system will detect if the output matches with the original input (descriptive text we entered), and penalize the AI if it does not, in order to make it more accurate.</p>
+                <p>These systems include chatbots such as ChatGPT and Copilot, as well as text-to-image AI image generation systems such as Stable Diffusion and DALL-E. Many companies, both large and small, have developed generative AI models. Generative AI has broad applications across a variety of industries, including software development, healthcare, finance, entertainment, customer service, sales and marketing, art, writing, fashion, and product design.</p>
             </div>
-            
-            <script>
-                var images = ["images/机器人1.png", "images/机器人2.jpg", "images/机器人3.jpg", "images/机器人4.jpg", "images/机器人5.jpg", "images/机器人6.jpg", "images/机器人7.jpg"];
-                var index = 0;
-                var imageContainer = document.getElementById('imageContainer2');
-                var intervalId;
-            
-                imageContainer.addEventListener('mouseover', function() {
-                    if (!intervalId) {
-                        intervalId = setInterval(function() {
-                            var img = imageContainer;
-                            img.style.transform = 'rotateY(180deg)';
-                            setTimeout(function() {
-                                index++;
-                                if (index == images.length) {
-                                    index = 0;
-                                }
-                                img.src = images[index];
-                                img.alt = "Image " + (index + 1);
-                                img.style.transform = 'rotateY(0deg)';
-                            }, 1000);
-                        }, 2000);
-                    }
-                });
-            </script>
-            
-            
+            <div style="flex: 1; margin-left: 10px; padding: 5px; border: 3px solid #5b5858; border-radius: 15px; background: url('background2.jpg'); box-shadow: 10px 10px 5px grey; display: flex; flex-direction: column; justify-content: space-between;">
+                <div style="flex: 1; margin-bottom: 10px;">
+                    <img src="images/1.jpeg" alt="Image" style="width:100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="flex: 1; margin-top: 10px;">
+                    <img src="images/2.jpeg" alt="Image" style="width:100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <p></p>
+    
 
 
-            <h4>
-                <span style="float:left;">HKSTP x HK InnoX</span>
-            </h4>
-            <div style="clear:both;">
-            <ul>
-            <li><span style="float:left;">Primary Product Manager </span><span style="float:right;">Jan. 2024-Now</span></li>
-            <ul style="list-style-type: none;">
-                <li>--Market Research; Business Analysis</li>
-            </ul>
-            </ul>
-            <img src="images/STP.jpg" class="center" width="817" height="600">
-            
-
-        
-
-    <h2 id="section3"> 3. Video of Robotics in FIRST <h2>
-        <h3>3.1 Obama's encouragement for the FIRST championship team </h3>
-        <iframe class="center" width="817" height="460" src="https://www.youtube.com/embed/Jz_t68hrNAw" title="2014 FIRST Championship Message from President Obama" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <h3>3.2 FIRST Champion Flag Raising Ceremony in America</h3>
-        <iframe class="center" width="817" height="460" src="https://www.youtube.com/embed/UeeWHMQfdVA" title="FIRST Champion Flag Raising Ceremony" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        
-    <h3 id="section4"> 4. Skills <h2>
-            <table border="1">
-                <tr>
-                  <th>Skills List</th>
-                  <th>Software</th>
-                  <th>Level</th>
-                </tr>
-                <tr>
-                  <td>Text design</td>
-                  <td>Word; Excel; PowerPoints; Tableau </td>
-                  <td>Advanced</td>
-                </tr>
-                <tr>
-                  <td>Graphic design</td>
-                  <td>CorelDRAW; Adobe Photoshop; Solid Work</td>
-                  <td>Junior</td>
-                </tr>
-                <tr>
-                    <td>Video design</td>
-                    <td>AE, Blender</td>
-                    <td>Junior</td>
-                  </tr>
-                <tr>
-                    <td>Program design</td>
-                    <td>Cisco Packet Tracer (Network Layer); Processing (Python); Visual Studio Code (C); IntelliJ (Java), MySQL (Database), Android Studio(C++)</td>
-                    <td>Intermediate</td>
-                  </tr>
-            </table>
 
 
-             
-    <h2> 5. Personal contact details </h2>
-    <img src="images/c4.jpg" class="center" width="50%" height="50%">
-    <footer>
-        <p class="center"><a href="https://faq.whatsapp.com/1183494482518500/?helpref=hc_fnav&cms_platform=android&locale=zh_CN" target="_blank">WhatsApp:+852-67414212</a></p>
-        <p class="center"><a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F%3Fhl%3Dzh-CN&emr=1&hl=zh-CN&ifkv=ATuJsjypHF5alakWE01yyPSnZ3HVsA3bqBZV5v9PD2H4f_4MqV7zIfnWuUO1e2PJ6I2c3z7Z_Wda8A&ltmpl=default&ltmplcache=2&osid=1&passive=true&rm=false&scc=1&service=mail&ss=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-468756898%3A1710513611733552&theme=mn&ddm=0">hechenglong810@gmail.com</a> </p>
-        <p class="right">&#169 He Chenglong</p>
-</footer>
-</body>
+    <div class="container" style="border: 5px solid #5b5858; border-radius: 15px; padding: 20px; box-shadow: 10px 10px 5px grey;">
+      <h1 id="section2"align="center">AI Image Generation Services</h1>
+      <h2 id="sub3">❀ Introduction</h2>
+      <h3><p>Image generate AI is a type of generative AI, where images can be returned by simply typing descriptive  words or scenarios. In current trend, there is 2 main ways to train AI producing images.</p>
+          <p>First one being “Generative Adversarial Networks”, which trains two AI in the same time, one being the generator producing images with what they have already learned, while the other AI detects whether the produced images are generated or not. After millions of loops, both AIs will learn how to create images that are hard to determine its authenticity and how to define generated and real images respectively. </p>
+          <p>The second is “Variational Autoencoders”, it encodes input data into smaller information called “latent space”, then creates random points with the information of the latent space and inputted data to create images. The system will detect if the output matches with the original input (descriptive text we entered), and penalize the AI if it does not, in order to make it more accurate. </p>
+          <p>Both ways rely heavily on data feed into their training model, which can greatly affect the generated images’ style, however it may also lead to copyright problems which is discussed a lot recently.</p>  
+          <p>There is currently multiple ways of telling the AI what image to create, such as text to image, image to image and fuse multiple images to one image.</p>
+          <p>Examples of different types of image generative AI will be listed below, they all serve different types of way to generate different images for various purposes.</p>
+       </h3>
+       <h2 id="sub4">❀ Service</h2>
+
+      <div class="service">
+        <h2 style="display: inline-block; border: 5px solid #5b5858; border-radius: 15px; padding: 20px; box-shadow: 10px 10px 5px grey;">DALL-E</h2>
+        <p>DALL-E, powered by OpenAI, generates images based on text description. It also provides the function of editing parts of existing images. Free for use, released in 2021.</p> 
+        <div style="text-align: center;">
+    <p><a href="https://openai.com/research/dall-e" target="_blank">Visit DALL-E</a></p>
+    <a href="https://openai.com/research/dall-e" target="_blank">
+        <img src="images/3.jpg" alt="Image" style="width:50%; height: 50%; object-fit: cover;">
+    </a>
+</div>
+<p>Examples of DALL-E:</p> 
+        <div class="slider">
+          <img src="images/4.jpg">
+          <img src="images/5.jpg">
+        </div>    
+      </div>
+      
+    
+      <div class="service">
+        <h2 style="display: inline-block; border: 5px solid #5b5858; border-radius: 15px; padding: 20px; box-shadow: 10px 10px 5px grey;">DeepArt</h2>
+        <p>DeepArt turns inputted images into artistic images of selected style. Free for use, found in 2016.</p>
+        <div style="text-align: center;">
+        <p><a href="https://deepai.org/art" target="_blank">Visit DeepArt</a></p>
+        <a href="https://deepai.org/art" target="_blank">
+          <img src="images/6.jpg" alt="Image" style="width:50%; height: 50%; object-fit: cover;">
+          </a></div>
+        <p>Examples of Visit DeepArt:</p> 
+        <div class="slider">
+          <img src="images/7.jpg">
+          <img src="images/8.jpg">
+      </div>
+    </div>
+
+      <div class="service">
+        <h2 style="display: inline-block; border: 5px solid #5b5858; border-radius: 15px; padding: 20px; box-shadow: 10px 10px 5px grey;">
+          Stable Diffusion</h2>
+        <p>Stable Diffusion allows you to train your AI yourself, providing flexibility in style generation. Free for use, released in 2022.</p>
+        <div style="text-align: center;">
+        <p><a href="https://github.com/CompVis/stable-diffusion" target="_blank">Visit Stable Diffusion</a></p>
+        <a href="https://github.com/CompVis/stable-diffusion" target="_blank"> 
+        <img src="images/9.jpg" alt="Image" style="width:50%; height: 50%; object-fit: cover;">
+      </a>
+  </div>  
+        <p>Examples of Stable Diffusion:</p> 
+        <div class="slider">
+          <img src="images/10.jpg">
+          <img src="images/11.jpg">
+        </div>
+      </div>
+
+      <div class="service">
+        <h2 style="display: inline-block; border: 5px solid #5b5858; border-radius: 15px; padding: 20px; box-shadow: 10px 10px 5px grey;">Artbreeder</h2>
+        <p>Artbreeder combines multiple images into a new one based on inputted content. Free to use, released in 2018.</p>
+        <div style="text-align: center;">
+          <div style="text-align: center;"></div>
+        <p><a href="https://www.artbreeder.com/" target="_blank">Visit Artbreeder</a></p>
+          <a href="https://www.artbreeder.com/" target="_blank">
+          <img src="images/12.jpg" alt="Image" style="width:50%; height: 50%; object-fit: cover;">
+        </a>
+    </div>
+    <p>Examples of Visit Artbreeder:</p> 
+        <div class="slider">
+          <img src="images/13.jpg">
+          <img src="images/14.jpg">
+        </div>
+      </div>
+
+      <div class="service">
+        <h2 style="display: inline-block; border: 5px solid #5b5858; border-radius: 15px; padding: 20px; box-shadow: 10px 10px 5px grey;">This Person Does Not Exist</h2>
+        <p>This is a simple website which shows human face that looks very realistic like an actual portrait by refreshing the page, however they are all made up by AI image generator. </p>
+        <div style="text-align: center;">
+        <p><a href="https://thispersondoesnotexist.com/" target="_blank">Visit Artbreeder</a></p>
+        <a href="https://thispersondoesnotexist.com/" target="_blank">    
+          <img src="images/15.jpg" alt="Image" style="width:50%; height: 50%; object-fit: cover;">
+        </a>
+    </div>
+    <p>Examples of Visit This Person Does Not Exist:</p> 
+        <div class="slider">
+          <img src="images/16.jpg">
+          <img src="images/17.jpg">
+        </div>
+      </div>
+    </div>
+    <p> </p>
+    
+
+
+
+
+
+
+    <div class="container" style="border: 5px solid #5b5858; border-radius: 15px; padding: 20px; box-shadow: 10px 10px 5px grey;">
+  <h1 id="section3"align="center">AI Video Generation Services</h1>
+  <h2 id="sub5">❀ Introduction</h2>
+  <h3><p>Generative AI text-to-video technology is mainly based on deep learning and natural language processing. </p>
+      <p>First, we need a large dataset of text and video, where each text corresponds to a video. We then use a text-to-video generative AI model that consists of an encoder and a decoder.  </p>
+      <p>The encoder converts the text input into a vector, and the decoder decodes that vector into the corresponding video.  </p>
+      <p>In this way, we can turn any text into a corresponding video, even some scenes or objects we have never seen before. The application of generative AI is very broad. </p>  
+      <p>In addition to converting simple text into video, it can also be applied to speech recognition, natural language processing, computer vision, and many other fields. In terms of video generation, one of the representatives of generative AI technology is GAN (Generative Adversarial Network). </p>
+      <p>Gans can use deep learning algorithms to convert simple text or pictures into realistic videos. For example, just enter a text description and a GAN can automatically generate a video corresponding to it. This technology is widely praised in the field of creative workers such as designers and artists and greatly improves creative efficiency. </p>
+      <p>In addition, generative AI technology can also create videos based on text prompts, which Silicon Valley investors are betting on, which can turn simple text into realistic images and even videos. </p>
+      <p>This technology's rise is changing how we think about content creation and information delivery. </p>
+      <p>Generative AI technology is mainly based on deep learning and natural language processing. Based on a given text input, these systems can be trained to understand natural language and generate images or videos with extremely high fidelity.</p>
+    </h3>
+  <h2 id="sub6">❀ Service</h2>
+  <div class="service">
+    <h2 style="display: inline-block; border: 5px solid #5b5858; border-radius: 15px; padding: 20px; box-shadow: 10px 10px 5px grey;"> Pictory</h2>
+    <p>Pictory is an AI video generator that turns articles or scripts into videos, allows you to edit videos with text, create shareable video highlights, and automatically add subtitles and summaries to videos. It's easy to create and edit high-quality videos without any video editing or design experience, perfect for both individual bloggers and companies to increase engagement and quality of video content.</p>
+    <div style="text-align: center;">
+<p><a href="https://pictory.ai/" target="_blank">Visit Pictory</a></p>
+<a href="https://pictory.ai/" target="_blank">
+    <img src="images/111.jpg" alt="Image" style="width:50%; height: 50%; object-fit: cover;">
+</a>
+</div>
+<p>Examples of Pictory:</p> 
+    <div class="slider">
+      <img src="images/112.jpg">
+      <img src="images/113.jpg">
+    </div><p> </p>
+    <div style="display: flex; justify-content: center;">
+      <iframe width="670" height="377" src="https://www.youtube.com/embed/qsoICGksSkM" title="Getty Images Available Now on Pictory: The BEST Festive Visuals at Your Fingertips!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+      
+  </div>
+  
+
+  <div class="service">
+    <h2 style="display: inline-block; border: 5px solid #5b5858; border-radius: 15px; padding: 20px; box-shadow: 10px 10px 5px grey;"> Synthesys</h2>
+    <p>Synthesys is a leading tool for developing text-to-speech and commercial video algorithms that enhance video content in short bursts. Users simply select an avatar and enter a script to generate high-quality video. The tool provides 69 real "Humatar" and a library of 254 unique styles, as well as a simple and intuitive user interface. Create great videos that explain videos, e-learning, social media, and product descriptions without a camera or crew.</p>
+    <div style="text-align: center;">
+    <p><a href="https://www.synthesis.com/" target="_blank">Visit Synthesys</a></p>
+    <a href="https://www.synthesis.com/" target="_blank">
+      <img src="images/114.jpg" alt="Image" style="width:50%; height: 50%; object-fit: cover;">
+      </a></div>
+    <p>Examples of Visit Synthesys:</p> 
+    <div class="slider">
+      <img src="images/115.jpg">
+      <img src="images/116.jpg">
+  </div><p> </p>
+  <div style="display: flex; justify-content: center;">
+    <iframe width="670" height="377" src="https://www.youtube.com/embed/JJFQKxrNxrQ" title="Synthesis AI  Intro Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</div>
+
+</div>
+
+  <div class="service">
+    <h2 style="display: inline-block; border: 5px solid #5b5858; border-radius: 15px; padding: 20px; box-shadow: 10px 10px 5px grey;">
+      HeyGen</h2>
+    <p>HeyGen is a powerful video platform that leverages generative AI technology to turn text into professional video as easy as creating a PowerPoint. Users can record and upload their own voice to create a personalized avatar, or enter text, with more than 300 sounds to choose from. The platform offers a variety of customization options, including combining multiple scenes into a single video, adding music to match the theme of the video, making face-changing videos and photos, and customizing avatars with your own voice by uploading recordings.</p>
+    <div style="text-align: center;">
+    <p><a href="https://app.heygen.com/login?sid=rewardful&via=uniteai" target="_blank">Visit HeyGen</a></p>
+    <a href="https://app.heygen.com/login?sid=rewardful&via=uniteai" target="_blank"> 
+    <img src="images/117.jpg" alt="Image" style="width:50%; height: 50%; object-fit: cover;">
+  </a>
+</div>  
+    <p>Examples of HeyGen:</p> 
+    <div class="slider">
+      <img src="images/118.jpg">
+      <img src="images/119.jpg">
+    </div><p> </p>
+    <div style="display: flex; justify-content: center;">
+      <iframe width="530" height="298" src="https://www.youtube.com/embed/aMAIAXHeTqg" title="Mona Lisa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      
+        </div>
+      
+
+  </div>
+
+  <div class="service">
+    <h2 style="display: inline-block; border: 5px solid #5b5858; border-radius: 15px; padding: 20px; box-shadow: 10px 10px 5px grey;"> BasedLabs</h2>
+    <p>BasedLabs is a video generation creative hub that offers a range of AI tools, including a video generator, face swap generator, selfie generator, image extender, and image amplifier, to help creators quickly generate videos and edit images. Whether it's social media influencers, business owners, photographers, or creators, they can use these tools to turn text into dynamic video, speed up workflows, improve content quality, and reach a wider audience. BasedLabs' goal is to help users turn their creative visions into reality.</p>
+    <div style="text-align: center;">
+      <div style="text-align: center;"></div>
+    <p><a href="https://www.basedlabs.ai/?via=uniteai
+" target="_blank">Visit BasedLabs
+</a></p>
+      <a href="https://www.basedlabs.ai/?via=uniteai
+" target="_blank">
+      <img src="images/120.jpg" alt="Image" style="width:50%; height: 50%; object-fit: cover;">
+    </a>
+</div>
+<p>Examples of Visit BasedLabs:</p> 
+    <div class="slider">
+      <img src="images/121.jpg">
+      <img src="images/122.jpg">
+    </div><p> </p>
+    <div style="display: flex; justify-content: center;">
+      <iframe width="685" height="377" src="https://www.youtube.com/embed/2g-bumpB5eA" title="My Sea Kitties AI animation made in I2vgen-XL model/ BasedLabs.ai Морские котики в Нейросети" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+
+  </div>
+
+  <div class="service">
+    <h2 style="display: inline-block; border: 5px solid #5b5858; border-radius: 15px; padding: 20px; box-shadow: 10px 10px 5px grey;"> Colossyan</h2>
+    <p>Colossyan is a video production tool that utilizes artificial intelligence and machine learning algorithms to make it easy for anyone to create video content. Users can choose an avatar, provide a script, and after generating a video, can automatically translate the entire video, change accents and costumes. The tool offers a variety of features, including selecting commercial synthetic AI presenters, adding subtitles to AI videos, personalizing videos with different accents, enhancing video messages through screen recording, and automatic translation capabilities.</p>
+    <div style="text-align: center;">
+    <p><a href="https://www.colossyan.com/?via=uniteai" target="_blank">Visit Colossyan</a></p>
+    <a href="https://www.colossyan.com/?via=uniteai
+" target="_blank">    
+      <img src="images/123.jpg" alt="Image" style="width:50%; height: 50%; object-fit: cover;">
+    </a>
+</div>
+<p>Examples of Visit Colossyan:</p> 
+    <div class="slider">
+      <img src="images/124.jpg">
+      <img src="images/125.jpg">
+    </div><p> </p>
+    <div style="display: flex; justify-content: center;">
+      <iframe width="761" height="428" src="https://www.youtube.com/embed/U2V4RTDWHbQ" title="Doctor-Patient Conversation Template" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+  </div>
+
+  </div>
+</div>
+    <p> </p>
+
+
+
+
+
+
+
+
+    <div class="container" style="border: 5px solid #5b5858; border-radius: 15px; padding: 20px; box-shadow: 10px 10px 5px grey;">
+  <h1 id="section4"align="center">AI Voice Generation Services</h1>
+  <h2 id="sub7">❀ Introduction</h2>
+  <h3><p>The text-to-speech technology of generative AI is a deep learning-based technology that relies primarily on deep learning and neural networks. This technology can convert any input text into the corresponding speech. By learning a large amount of speech and text data, it can generate high-quality, realistic speech content, and achieve flexible and personalized speech output.</p>
+      <p>This technique uses an advanced deep learning architecture, such as a short term memory Network (LSTM) or a Feed-Forward Neural Network, to capture associations between text and speech. Through training, the neural network can learn the characteristics and rules of speech, so as to convert the input text into the corresponding speech.</p>
+      <p>TAt present, the mainstream AI text-to-speech technology is mainly divided into rule-based methods and deep learning-based methods. Rule-based approaches rely primarily on human-written rules and templates, while deep learning-based approaches train neural networks to generate speech through vast amounts of data.</p>  
+      <p>In addition, in recent years, some new speech synthesis methods have been proposed, and the synthesis effect is relatively ideal. For example, the WaveNet synthesis system proposed by the DeepMind team, by building an autoregressive model, directly modeling the time domain sampling point, and obtaining high naturalness synthetic speech. On the other hand, the Char2Wav proposed by Yoshua Bengio's team and the Tacotron system proposed by Google directly establish the mapping relationship between input text and output speech, and realize end-to-end speech synthesis, and the synthesized speech effect can be close to the level of real people's pronunciation. These new methods are driving the development of AI text-to-speech technology.</p>
+    </h3>
+  <h2 id="sub8">❀ Service</h2>
+  <div class="service">
+    <h2 style="display: inline-block; border: 5px solid #5b5858; border-radius: 15px; padding: 20px; box-shadow: 10px 10px 5px grey;"> Descript </h2>
+    <p> Descript transcribes your video and lets you edit it like a document. Create an ultra-realistic AI speech clone and convert text to speech in seconds. Use Studio Sound to instantly eliminate background noise and polish audio.
+</p>
+    <div style="text-align: center;">
+<p><a href="https://www.descript.com/tour" target="_blank">Visit Descript </a></p>
+<a href="https://www.descript.com/tour" target="_blank">
+    <img src="images/201.jpg" alt="Image" style="width:50%; height: 50%; object-fit: cover;">
+</a>
+</div>
+<p>Examples of Descript:</p> 
+    <div class="slider">
+      <img src="images/202.jpg">
+      <img src="images/203.jpg">
+    </div><p> </p>
+    <div style="display: flex; justify-content: center;">
+      <iframe width="806" height="452" src="https://www.youtube.com/embed/pOEvyYDGuzQ" title="The new Descript – made for podcasters" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+  </div>
+      
+  </div>
+  
+
+  <div class="service">
+    <h2 style="display: inline-block; border: 5px solid #5b5858; border-radius: 15px; padding: 20px; box-shadow: 10px 10px 5px grey;"> Lyrebird </h2>
+    <p> Lyrebird is a company that provides speech synthesis solutions, and their AI technology can learn and mimic anyone's speech from a small number of samples. This allows users to use their own voice to generate natural speech clips. Free trial, first published in 2017.</p>
+    <div style="text-align: center;">
+    <p><a href="https://lyrebird.ai/
+" target="_blank">Visit Lyrebird </a></p>
+    <a href="https://lyrebird.ai/
+" target="_blank">
+      <img src="images/204.jpg" alt="Image" style="width:50%; height: 50%; object-fit: cover;">
+      </a></div>
+    <p>Examples of Visit Lyrebird:</p> 
+    <div class="slider">
+      <img src="images/205.jpg">
+      <img src="images/206.jpg">
+  </div><p> </p>
+  <div style="display: flex; justify-content: center;">
+    <iframe width="864" height="486" src="https://www.youtube.com/embed/JruKb-Zeze8" title="Change Your Voice to ANY CELEBRITY with This Free AI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+</div>
+
+</div>
+
+  <div class="service">
+    <h2 style="display: inline-block; border: 5px solid #5b5858; border-radius: 15px; padding: 20px; box-shadow: 10px 10px 5px grey;">
+      Baidu PaddleSpeech </h2>
+    <p> Baidu PaddleSpeech is a simple and easy-to-use all-in-one speech toolbox, supporting the development of speech recognition, speech synthesis, voice print recognition, voice classification, speech translation, punctuation recovery, voice arousal and other directions.
+</p>
+    <div style="text-align: center;">
+    <p><a href="https://aistudio.baidu.com/overview
+" target="_blank">Visit Baidu PaddleSpeech </a></p>
+    <a href="https://aistudio.baidu.com/overview
+" target="_blank"> 
+    <img src="images/207.jpg" alt="Image" style="width:50%; height: 50%; object-fit: cover;">
+  </a>
+</div>  
+    <p>Examples of Baidu PaddleSpeech:</p> 
+    <div class="slider">
+      <img src="images/208.jpg">
+      <img src="images/209.jpg">
+    </div><p> </p>
+    <div style="display: flex; justify-content: center;">
+      <iframe width="727" height="409" src="https://www.youtube.com/embed/LnjlZ4idVVE" title="五分钟克隆你的声音保姆教程，中文声音在线克隆，仅需十条语音，有手就会，完全免费! Chinese Voice cloning online free, step by step #AI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+      
+        </div>
+      
+
+  </div>
+
+  <div class="service">
+    <h2 style="display: inline-block; border: 5px solid #5b5858; border-radius: 15px; padding: 20px; box-shadow: 10px 10px 5px grey;"> Amazon Polly </h2>
+    <p> Amazon Polly is a service that turns text into lifelike speech, allowing you to create apps that speak and build whole new categories of voice-enabled products. Polly's text-to-speech (TTS) service uses advanced deep learning techniques to synthesize speech that sounds like natural human speech. Amazon Polly offers dozens of lifelike voices in many languages, so you can build voice-enabled apps for many different countries. </p>
+
+<p> In addition to standard TTS speech, neurotext-to-speech (NTTS) voice is provided to improve speech quality with a new machine learning approach. Polly's Neural TTS technology also supports news anchor speaking styles, which are tailored to news narrative use cases.</p>
+    <div style="text-align: center;">
+      <div style="text-align: center;"></div>
+    <p><a href=" www.amazonaws.cn/polly
+" target="_blank">Visit Amazon Polly
+</a></p>
+      <a href=" www.amazonaws.cn/polly
+" target="_blank">
+      <img src="images/210.jpg" alt="Image" style="width:50%; height: 50%; object-fit: cover;">
+    </a>
+</div>
+<p>Examples of Visit Amazon Polly:</p> 
+    <div class="slider">
+      <img src="images/211.jpg">
+      <img src="images/212.jpg">
+    </div><p> </p>
+    <div style="display: flex; justify-content: center;">
+      <iframe width="837" height="471" src="https://www.youtube.com/embed/jXPN12ReUJg" title="Text-to-Speech with Amazon Polly" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+
+  </div>
+
+  </div>
+
+  <div class="service">
+    <h2 style="display: inline-block; border: 5px solid #5b5858; border-radius: 15px; padding: 20px; box-shadow: 10px 10px 5px grey;"> ReplicaStudios </h2>
+    <p> ReplicaStudios is designed for games, meta-universes, and narration/movie dialogue. ReplicaStudios has the following features: AI voice actors can produce unique voice patterns based on your ideal voice performance. Signature voiceover for pronunciation and emotional range. Voice cloning.</p>
+    <div style="text-align: center;">
+    <p><a href=" https ://replicastudios.com/
+" target="_blank">Visit ReplicaStudios </a></p>
+    <a href=" https ://replicastudios.com/
+
+" target="_blank">    
+      <img src="images/213.jpg" alt="Image" style="width:50%; height: 50%; object-fit: cover;">
+    </a>
+</div>
+<p>Examples of Visit ReplicaStudios:</p> 
+    <div class="slider">
+      <img src="images/214.jpg">
+      <img src="images/215.jpg">
+    </div><p> </p>
+    <div style="display: flex; justify-content: center;">
+      <iframe width="837" height="471" src="https://www.youtube.com/embed/W_VaOiXlXqo" title="Replica Vox-1 models in Preview mode" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+  </div>
+
+  </div>
+
+  <div class="service">
+    <h2 style="display: inline-block; border: 5px solid #5b5858; border-radius: 15px; padding: 20px; box-shadow: 10px 10px 5px grey;"> MURF.AI </h2>
+    <p> Murf is at the forefront of AI speech generation technology, providing best-in-class solutions for individuals and businesses aiming to enhance their audio projects. The online speech generator utilizes sophisticated artificial intelligence algorithms and deep learning techniques to convert written text into extremely natural and realistic speech. Recognized as one of the best AI speech generators available today, Murf is adept at converting text into speech, voiceovers, and dictation, which is invaluable to product developers, podcasters, educators, and professionals in the corporate world.</p>
+    <div style="text-align: center;">
+    <p><a href=" https://murf.ai/?pscd=get.murf.ai&ps_partner_key=b3c1aWth&ps_xid=bwbEgAv9dMdQ9i&gsxid=bwbEgAv9dMdQ9i&gspk=b3c1aWth
+" target="_blank">Visit MURF.AI </a></p>
+    <a href=" https://murf.ai/?pscd=get.murf.ai&ps_partner_key=b3c1aWth&ps_xid=bwbEgAv9dMdQ9i&gsxid=bwbEgAv9dMdQ9i&gspk=b3c1aWth
+
+" target="_blank">    
+      <img src="images/216.jpg" alt="Image" style="width:50%; height: 50%; object-fit: cover;">
+    </a>
+</div>
+<p>Examples of Visit MURF.AI:</p> 
+    <div class="slider">
+      <img src="images/217.jpg">
+      <img src="images/218.jpg">
+    </div><p> </p>
+    <div style="display: flex; justify-content: center;">
+      <iframe width="676" height="380" src="https://www.youtube.com/embed/QhZbemnlKtA" title="Create and Customise Voice Overs | Murf AI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+
+  </div>
+</div>
+    <p> </p>
+
+  </body>
+</div>
+<footer>
+    <p class="inline">&copy; 2024 Richard, Charlie, Alain.</p>
+  <p>23271892@life.hkbu.edu.hk</p>
+   <p>22222987@life.hkbu.edu.hk</p>
+   <p>23226536@life.hkbu.edu.hk</p>
+  </footer>
 
 </html>
-
-
